@@ -6,7 +6,7 @@ public class PlayerControls : MonoBehaviour
 {
     // Game manager object
     [Header("Game Controller Object for controlling the game")]
-    private GameController gameController;
+    public GameController gameController;
     [Header("Default Velocity")]
     public float velocity = 1f;
     // Physics for the bird
@@ -17,8 +17,6 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Game Controller component
-        gameController = GetComponent<GameController>();
         // Speed for the game at a playing state
         // Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
